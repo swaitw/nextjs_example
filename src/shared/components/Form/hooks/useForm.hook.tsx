@@ -60,7 +60,7 @@ export const validateFieldValue = async (
 ): Promise<ValidationResult & { validated: boolean }> => {
   for (const validator of validators) {
     const result = await validator(value);
-    console.log("result", result);
+
     if (!result.isValid) {
       return { ...result, validated: true };
     }
@@ -94,11 +94,9 @@ const useForm = (): FormHandlers => {
         isValid: true,
         validators,
       };
-      console.log("checking register field", name, fields.current);
 
       return {
         unregister: () => {
-          console.log("checking unregister field", name);
           delete fields.current[name];
         },
       };
