@@ -1,0 +1,34 @@
+@use "@/styles/abstracts/functions" as *;
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: spacing(0.25);
+
+
+}
+
+.modal-message {
+    padding: spacing(0.5);
+    border-radius: border-radius();
+    min-width: 400px;
+    text-align: center;
+}
+
+.modal-message-info {
+    background-color: blue;
+    color: white;
+}
+
+.modal-message-error {
+    background-color: red;
+    color: white;
+}
+
+.modal-message-success {
+    background-color: green;
+    color: white;
+}

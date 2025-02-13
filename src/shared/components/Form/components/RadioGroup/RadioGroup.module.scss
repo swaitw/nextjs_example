@@ -1,0 +1,12 @@
+@use "@/styles/abstracts/variables" as *;
+.radio-group-options {
+  display: flex;
+  gap: spacing;
+  label{
+    display: flex;
+    align-items: center;
+    input {
+      width: auto;
+    }
+  }
+}

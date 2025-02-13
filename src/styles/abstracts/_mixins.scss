@@ -1,0 +1,39 @@
+@use "variables" as *; 
+
+@mixin font-size($size: $font-size-md) {
+    font-size: clamp($size - 0.5rem, $size, $size + 0.5rem);
+    line-height: $size + 0.25rem;
+  }
+
+
+
+
+@mixin up-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+      @media (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    } @else {
+      @warn "Breakpoint #{$breakpoint} not found.";
+    }
+  }
+
+  @mixin button-style($bg: $primary-color, $color: #fff) {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: $bg;
+    color: $color;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+    &:hover {
+      background-color: darken($bg, 10%);
+    }
+    &:disabled {
+      background-color: lighten($bg, 20%);
+      cursor: not-allowed;
+    }
+  }

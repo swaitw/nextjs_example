@@ -1,0 +1,46 @@
+$primary-color: #da1710;
+$secondary-color: #991ad6;
+
+$spacing-unit: 1rem;
+$spacing-scale: (
+    0.25: $spacing-unit * 0.25,
+    0.5: $spacing-unit * 0.5,
+    1: $spacing-unit,
+    1.5: $spacing-unit * 1.5,
+    2: $spacing-unit * 2,
+    3: $spacing-unit * 3,
+    4: $spacing-unit * 4,
+    5: $spacing-unit * 5,
+    6: $spacing-unit * 6,
+    7: $spacing-unit * 7,
+    8: $spacing-unit * 8
+);
+
+$border-radius-unit: 0.25rem;
+$border-radius-scale: (
+    0: 0,
+    1: $border-radius-unit,
+    2: $border-radius-unit * 2,
+    3: $border-radius-unit * 3,
+    4: $border-radius-unit * 4,
+    5: $border-radius-unit * 5
+);
+
+
+
+
+
+$font-size-xs: 0.5rem;
+$font-size-sm: 0.75rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+
+
+$breakpoints: (
+  "xs": 480px,
+  "sm": 768px,
+  "md": 1024px,
+  "lg": 1280px,
+  "xl": 1600px
+);

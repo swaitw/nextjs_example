@@ -1,0 +1,16 @@
+@use "variables" as *; 
+@function spacing($size: 1) {
+    @if map-has-key($spacing-scale, $size) {
+      @return map-get($spacing-scale, $size);
+    } @else {
+      @error "Spacing `#{$size}` is not defined in $spacing-scale!";
+    }
+  }
+
+    @function border-radius($size: 1) {
+    @if map-has-key($border-radius-scale, $size) {
+      @return map-get($border-radius-scale, $size);
+    } @else {
+      @error "Border radius `#{$size}` is not defined in $border-radius-scale!";
+    }
+  }
